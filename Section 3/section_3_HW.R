@@ -6,6 +6,29 @@ expenses <- c(12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5
 # use the functions: round(), mean(), max() and mi  n()
 
 # part 1 - profit for each month
-
+print("#1 profit for each month:")
 profit <- revenue-expenses
 profit
+round(profit, digits = 2)
+
+# part 2 - profit after taxes
+print("#2 profit after taxes:")
+profit_real <- profit*0.7
+profit_real
+round(profit_real, digits = 2)
+
+# part 3 - proft margin 
+print("#3 profit margin:")
+profit_margin <- profit_real/revenue
+profit_margin
+round(profit_margin, digits = 2)
+
+# part 4 - good months
+print("#4 good months:")
+
+mean_months <- mean(profit_real)
+for(i in 1:12){
+  if(profit_real[i] > mean_months){
+    print(profit_real[i])
+  }
+}
