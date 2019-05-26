@@ -25,10 +25,37 @@ round(profit_margin, digits = 2)
 
 # part 4 - good months
 print("#4 good months:")
-
+count <- 1
 mean_months <- mean(profit_real)
 for(i in 1:12){
   if(profit_real[i] > mean_months){
     print(profit_real[i])
+    good_months[count] <-profit_real[i]
+    count <- count + 1
   }
 }
+good_months <- round(good_months, 2)
+
+# part 5 - bad months
+print("#5 bad months:")
+count <- 1
+mean_months <- mean(profit_real)
+for(i in 1:12){
+  if(profit_real[i] < mean_months){
+    print(profit_real[i])
+    bad_months[count]<-profit_real[i]
+    count <- count + 1
+  }
+}
+bad_months <- round(bad_months,2)
+
+# part 6 - best month
+print("#6 best month: ")
+best_month <- max(good_months)
+best_month
+
+# part 7 - worst month
+print("#7 worst month: ")
+min(bad_months)
+worst_month <- min(bad_months)
+worst_month
