@@ -31,3 +31,18 @@ Games[1,,drop=FALSE]
 # so, it may transform a matrix into a vector
 
 Games[1,5,drop=FALSE]
+
+# ----//----
+Data <- MinutesPlayed[1:3,]
+matplot(t(Data), type="b",pch=15:18, col=c(1:4,6))
+legend("bottomleft",inset=0.01,legend=Players[1:3],col=c(1:4,6),pch=15:18,horiz=F)
+
+Data
+
+# remember to use the subsetting to make a matrix out of a vector
+# matplot requires a matrix, and if you use just one dimension it will not
+# work, unless you use drop=F while slicing the dataset
+
+Data <- MinutesPlayed[1,,drop=F]
+matplot(t(Data), type="b",pch=15:18, col=c(1:4,6))
+legend("bottomleft",inset=0.01,legend=Players[1],col=c(1:4,6),pch=15:18,horiz=F)
