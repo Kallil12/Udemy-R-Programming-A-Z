@@ -33,4 +33,3 @@ stats$MyCalc <- NULL
 head(stats)
 
 
-
