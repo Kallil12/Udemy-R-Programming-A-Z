@@ -53,10 +53,10 @@ h + xlab("Money Axis") + ylab("Number of Movies") +
   ggtitle("Movies Budget Distribution") +
   theme(axis.title.x = element_text(color="DarkGreen", size=15),
         axis.title.y = element_text(color="Red",size=15),
-        axis.text.x = element_text(size=20),
-        axis.text.y = element_text(size=20),
-        legend.title = element_text(size=30),
-        legend.text = element_text(size=20),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        legend.title = element_text(size=15),
+        legend.text = element_text(size=10),
         legend.position = c(1,1),
         legend.justification = c(1,1),
         plot.title = element_text(color="DarkBlue",size=15,family="Courier"))
